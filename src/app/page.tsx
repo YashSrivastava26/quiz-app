@@ -14,15 +14,15 @@ import { useState } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const category = ["Linux", "DevOps", "Docker", "Random"];
-  const [categoryChoosen, setCategoryChoosen] = useState("Random");
+  const category = ["Linux", "DevOps", "Docker"];
+  const [categoryChoosen, setCategoryChoosen] = useState("");
   const handleCategoryChoosing = (category: string) => {
     setCategoryChoosen(category);
 
     router.push(`/quiz/${category}`);
   };
   return (
-    <main className="min-h-screen max-w-7xl flex justify-center items-center">
+    <main className="min-h-screen max-w-7xl flex justify-center items-center mx-auto">
       <div className="flex items-center justify-center flex-col">
         <div className="flex items-center justify-center text-2xl">
           Please select tha Catagory of the quiz
